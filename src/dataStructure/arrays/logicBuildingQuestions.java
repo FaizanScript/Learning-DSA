@@ -1,8 +1,7 @@
 package dataStructure.arrays;
-import javax.swing.plaf.PanelUI;
 import java.util.Arrays;
 
-public class basicQuestions {
+public class logicBuildingQuestions {
 
 //    EASY (DAY 1)
     public static void q1() {
@@ -496,6 +495,223 @@ public class basicQuestions {
         }
     }
 
+//    MATRIX LOGIC-BUILDING
+//    EASY
+    public static void q31() {
+//        q31 - print main diagonal (the line of entries that runs from
+//        the top-left corner to the bottom-right corner)
+
+//        MATRIX LOGIC 1: MAIN DIAGONAL
+//          KEY CONDITION:- I == J
+
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i == j) {
+                    System.out.println(arr[i][j]);
+                }
+            }
+        }
+    }
+
+    public static void q32() {
+//        q32 - print secondary diagonal (the line of entries that runs from
+//        the top-left corner to the bottom-right corner)
+
+//        MATRIX LOGIC 2: SECONDARY DIAGONAL
+//          KEY CONDITION:- I + J == ARR.LENGTH - 1
+
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i + j == arr.length - 1) {
+                    System.out.println(arr[i][j]);
+                }
+            }
+        }
+    }
+
+    public static void q33() {
+//        q33 - sum of the main diagonal
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i == j) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        System.out.println(sum);
+    }
+
+    public static void q34() {
+//        q34 - sum of the secondary diagonal
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i + j == arr.length - 1) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        System.out.println(sum);
+    }
+
+    public static void q35() {
+//        count even numbers in boundary (The boundary elements of a matrix are the numbers located on its outer edges,
+//        which include the entire first row, last row, first column, and last column.)
+
+//        MATRIX LOGIC 3: BOUNDARY
+//            KEY CONDITION:- I == 0 OR I == ROWS-1 OR J == 0 OR J == COLS-1
+
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        int evenCount = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if ( i == 0 || i == arr.length - 1 ||j == 0 || j == arr[i].length - 1) {
+                    if (arr[i][j] % 2 == 0) {
+                     evenCount++;
+                    }
+                }
+            }
+        }
+
+        System.out.println(evenCount);
+
+    }
+
+//    MEDIUM
+    public static void q36() {
+//        q36 - print only upper triangle elements
+
+//      MATRIX LOGIC 4: UPPER TRIANGLE
+//        KEY CONDITION:- I < J
+
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i < j) {
+                    System.out.println(arr[i][j]);
+                }
+            }
+        }
+    }
+
+    public static void q37() {
+//        q37 - print only lower triangle elements
+
+//      MATRIX LOGIC 5: LOWER TRIANGLE
+//        KEY CONDITION:- I > J
+
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i > j) {
+                    System.out.println(arr[i][j]);
+                }
+            }
+        }
+    }
+
+    public static void q38() {
+//        q38 - sum of the upper tirangle
+
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i < j) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+
+        System.out.println(sum);
+    }
+
+    public static void q39() {
+//        q39 - sum of lower triangle
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i > j) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        System.out.println(sum);
+    }
+
+    public static void q40() {
+//        q40 - print the sun of only boundary elements
+        int[][] arr = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (i == 0 || j == 0 || i == arr.length-1 || j == arr[i].length-1) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        System.out.println(sum);
+    }
+
     public static void main(String[] args) {
 
         q1();
@@ -529,5 +745,15 @@ public class basicQuestions {
         q28();
         q29();
         q30();
+        q31();
+        q32();
+        q33();
+        q34();
+        q35();
+        q36();
+        q37();
+        q38();
+        q39();
+        q40();
     }
 }
