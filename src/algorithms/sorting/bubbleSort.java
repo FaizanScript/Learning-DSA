@@ -16,18 +16,18 @@ public class bubbleSort {
 //    How It Works:-
 //    The algorithm scans through an array from left to right across multiple passes.
 
-//    1. Compare adjacent pairs. Start at the first element and compare it with the element right next to it.
-//    2. Swap if needed. If the left element is larger than the right element, swap their positions to sort in ascending order.
-//    3. Repeat to the end. Move one step to the right and repeat the comparison until reaching the end of the unsorted section.
-//      After the first pass, the largest item is guaranteed to be at the very end.
-//    4. Optimize with a flag. Track whether any swaps happen during a pass. If a complete pass finishes with zero swaps,
-//      the list is already sorted and the algorithm stops early.
+//    1. Compare adjacent pairs: Start at the first element and compare it with the element right next to it.
+//    2. Swap if needed: If the left element is larger than the right element, swap their positions to sort in ascending order.
+//    3. Repeat to the end: Move one step to the right and repeat the comparison until reaching the end of the unsorted section.
+//          After the first pass, the largest item is guaranteed to be at the very end.
+//    4. Optimize with a flag: Track whether any swaps happen during a pass. If a complete pass finishes with zero swaps,
+//          the list is already sorted and the algorithm stops early.
 
 
 //    when to use bubble sort:-
-//      1. Educational learning. Its straightforward logic makes it ideal for introducing beginners to sorting concepts and nested loops.
-//      2. Tiny or nearly sorted datasets. It performs well when checking if a small list is already in order.
-//      3. Avoid for large data. Production systems rely on faster algorithms like Merge Sort or Quick Sort because O(n²) becomes too slow on large inputs.
+//      1. Educational learning: Its straightforward logic makes it ideal for introducing beginners to sorting concepts and nested loops.
+//      2. Tiny or nearly sorted datasets: It performs well when checking if a small list is already in order.
+//      3. Avoid for large data: Production systems rely on faster algorithms like Merge Sort or Quick Sort because O(n²) becomes too slow on large inputs.
 
 
 //    Example
